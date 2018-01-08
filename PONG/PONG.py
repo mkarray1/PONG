@@ -16,23 +16,23 @@ StarSpeed = 2
 xStar2 = []
 yStar2 = []
 
-def BackGround():
-    global xStar, yStar,StarSpeed, i,snow, snowcolour
-    snowcolour="white"
-    for i in range(150):
-        newxStar = randint(0,700)
-        newyStar = randint(0,700)
-        xStar.append(newxStar)
-        yStar.append(newyStar)
-        
-        snow=s.create_oval(xStar[i],yStar[i],xStar[i]+5,yStar[i]+5,fill=snowcolour)
-        xStar[i]=xStar[i]+StarSpeed
-        yStar[i]=yStar[i]+StarSpeed
-        s.update()
-        
+##def BackGround():
+##    global xStar, yStar,StarSpeed, i,snow, snowcolour
+##    snowcolour="white"
+##    for i in range(150):
+##        newxStar = randint(0,700)
+##        newyStar = randint(0,700)
+##        xStar.append(newxStar)
+##        yStar.append(newyStar)
+##        
+##        snow=s.create_oval(xStar[i],yStar[i],xStar[i]+5,yStar[i]+5,fill=snowcolour)
+##        xStar[i]=xStar[i]+StarSpeed
+##        yStar[i]=yStar[i]+StarSpeed
+##        s.update()
+##        
 def BackGround2():
         global xStar2,yStar2
-        for i in range(150):
+        for i in range(75):
             newxStar2 = randint(0,700)
             newyStar2 = randint(0,700)
             xStar2.append(newxStar2)
@@ -271,7 +271,7 @@ def UpdateBall():
     xBall = xBall + xBallSpeed
     yBall = yBall + yBallSpeed
 
-    if xPong+5 == xBall+xBallSpeed and yPong-15<=yBall+xBallSpeed<=yPong+PongLength1+10:
+    if xPong == xBall+xBallSpeed and yPong-15<=yBall+xBallSpeed<=yPong+PongLength1+10:
         xBallSpeed = xBallSpeed*-1
 
     if yBall+yBallSpeed <= upWall:
